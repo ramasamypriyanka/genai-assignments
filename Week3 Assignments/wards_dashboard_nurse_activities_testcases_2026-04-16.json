@@ -1,0 +1,237 @@
+{
+  "cases": [
+    {
+      "id": "TC-001",
+      "title": "Valid User Access - Dashboard Loads Correctly",
+      "priority": "High",
+      "steps": [
+        "Login with valid credentials",
+        "Navigate to Wards Dashboard"
+      ],
+      "expectedResult": "Relevant data and visualizations are displayed correctly without delay",
+      "category": "Positive"
+    },
+    {
+      "id": "TC-002",
+      "title": "Invalid User Access - Dashboard Access Denied",
+      "priority": "High",
+      "steps": [
+        "Login with invalid credentials",
+        "Navigate to Wards Dashboard"
+      ],
+      "expectedResult": "Access denied error message is displayed",
+      "category": "Negative"
+    },
+    {
+      "id": "TC-003",
+      "title": "No Data Available - Dashboard Displays Message",
+      "priority": "Medium",
+      "steps": [
+        "Login with valid credentials",
+        "Navigate to Wards Dashboard with no data"
+      ],
+      "expectedResult": "No data available message is displayed",
+      "category": "Edge"
+    },
+    {
+      "id": "TC-004",
+      "title": "Delayed Loading - Dashboard Displays Loading Animation",
+      "priority": "Medium",
+      "steps": [
+        "Login with valid credentials",
+        "Navigate to Wards Dashboard with slow network"
+      ],
+      "expectedResult": "Loading animation is displayed until data is loaded",
+      "category": "Edge"
+    },
+    {
+      "id": "TC-005",
+      "title": "Valid User Access - Dashboard Visualizations",
+      "priority": "High",
+      "steps": [
+        "Login with valid credentials",
+        "Navigate to Wards Dashboard",
+        "Verify visualizations"
+      ],
+      "expectedResult": "Visualizations are displayed correctly",
+      "category": "Positive"
+    },
+    {
+      "id": "TC-006",
+      "title": "Nurse Activities - View Patient List",
+      "priority": "Medium",
+      "steps": [
+        "Login with valid credentials",
+        "Navigate to Wards Dashboard",
+        "View patient list"
+      ],
+      "expectedResult": "Patient list is displayed correctly",
+      "category": "Positive"
+    },
+    {
+      "id": "TC-007",
+      "title": "Nurse Activities - View Patient Details",
+      "priority": "Medium",
+      "steps": [
+        "Login with valid credentials",
+        "Navigate to Wards Dashboard",
+        "View patient details"
+      ],
+      "expectedResult": "Patient details are displayed correctly",
+      "category": "Positive"
+    },
+    {
+      "id": "TC-008",
+      "title": "Nurse Activities - Update Patient Status",
+      "priority": "Medium",
+      "steps": [
+        "Login with valid credentials",
+        "Navigate to Wards Dashboard",
+        "Update patient status"
+      ],
+      "expectedResult": "Patient status is updated correctly",
+      "category": "Positive"
+    },
+    {
+      "id": "TC-009",
+      "title": "Nurse Activities - Add New Activity",
+      "priority": "Medium",
+      "steps": [
+        "Login with valid credentials",
+        "Navigate to Wards Dashboard",
+        "Add new activity"
+      ],
+      "expectedResult": "New activity is added correctly",
+      "category": "Positive"
+    },
+    {
+      "id": "TC-010",
+      "title": "Nurse Activities - Delete Activity",
+      "priority": "Medium",
+      "steps": [
+        "Login with valid credentials",
+        "Navigate to Wards Dashboard",
+        "Delete activity"
+      ],
+      "expectedResult": "Activity is deleted correctly",
+      "category": "Positive"
+    },
+    {
+      "id": "TC-011",
+      "title": "Multiple Users - Dashboard Updates in Real-time",
+      "priority": "Medium",
+      "steps": [
+        "Login with multiple users",
+        "Navigate to Wards Dashboard",
+        "Verify real-time updates"
+      ],
+      "expectedResult": "Dashboard updates are reflected in real-time for all users",
+      "category": "Positive"
+    },
+    {
+      "id": "TC-012",
+      "title": "No Internet Connection - Dashboard Error",
+      "priority": "Medium",
+      "steps": [
+        "Login with valid credentials",
+        "Navigate to Wards Dashboard with no internet"
+      ],
+      "expectedResult": "Error message is displayed for no internet connection",
+      "category": "Edge"
+    },
+    {
+      "id": "TC-013",
+      "title": "Browser Compatibility - Dashboard Loads Correctly",
+      "priority": "Medium",
+      "steps": [
+        "Login with valid credentials on different browsers",
+        "Navigate to Wards Dashboard"
+      ],
+      "expectedResult": "Dashboard loads correctly on different browsers",
+      "category": "Edge"
+    },
+    {
+      "id": "TC-014",
+      "title": "Screen Resolution - Dashboard Adapts Correctly",
+      "priority": "Medium",
+      "steps": [
+        "Login with valid credentials on different screen resolutions",
+        "Navigate to Wards Dashboard"
+      ],
+      "expectedResult": "Dashboard adapts correctly to different screen resolutions",
+      "category": "Edge"
+    },
+    {
+      "id": "TC-015",
+      "title": "Data Filtering - Dashboard Displays Filtered Data",
+      "priority": "Medium",
+      "steps": [
+        "Login with valid credentials",
+        "Navigate to Wards Dashboard",
+        "Apply filters"
+      ],
+      "expectedResult": "Dashboard displays filtered data correctly",
+      "category": "Positive"
+    },
+    {
+      "id": "TC-016",
+      "title": "Data Sorting - Dashboard Displays Sorted Data",
+      "priority": "Medium",
+      "steps": [
+        "Login with valid credentials",
+        "Navigate to Wards Dashboard",
+        "Sort data"
+      ],
+      "expectedResult": "Dashboard displays sorted data correctly",
+      "category": "Positive"
+    },
+    {
+      "id": "TC-017",
+      "title": "Error Handling - Dashboard Displays Error Message",
+      "priority": "High",
+      "steps": [
+        "Login with valid credentials",
+        "Navigate to Wards Dashboard with error"
+      ],
+      "expectedResult": "Error message is displayed correctly",
+      "category": "Negative"
+    },
+    {
+      "id": "TC-018",
+      "title": "Security - Dashboard Access Control",
+      "priority": "High",
+      "steps": [
+        "Login with invalid credentials",
+        "Navigate to Wards Dashboard"
+      ],
+      "expectedResult": "Access control is enforced correctly",
+      "category": "Negative"
+    },
+    {
+      "id": "TC-019",
+      "title": "Performance - Dashboard Loads Within Expected Time",
+      "priority": "High",
+      "steps": [
+        "Login with valid credentials",
+        "Navigate to Wards Dashboard"
+      ],
+      "expectedResult": "Dashboard loads within expected time",
+      "category": "Positive"
+    },
+    {
+      "id": "TC-020",
+      "title": "Usability - Dashboard is User-Friendly",
+      "priority": "Medium",
+      "steps": [
+        "Login with valid credentials",
+        "Navigate to Wards Dashboard",
+        "Verify usability"
+      ],
+      "expectedResult": "Dashboard is user-friendly and easy to navigate",
+      "category": "Positive"
+    }
+  ],
+  "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+  "promptTokens": 1135,
+  "completionTokens": 1506
+}

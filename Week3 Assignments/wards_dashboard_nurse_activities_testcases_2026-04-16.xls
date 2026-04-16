@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+  <Worksheet ss:Name="Test Cases">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">Test Case ID</Data></Cell>
+        <Cell><Data ss:Type="String">Title</Data></Cell>
+        <Cell><Data ss:Type="String">Category</Data></Cell>
+        <Cell><Data ss:Type="String">Expected Result</Data></Cell>
+        <Cell><Data ss:Type="String">Steps</Data></Cell>
+        <Cell><Data ss:Type="String">Test Data</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-001</Data></Cell>
+        <Cell><Data ss:Type="String">Valid User Access - Dashboard Loads Correctly</Data></Cell>
+        <Cell><Data ss:Type="String">Positive</Data></Cell>
+        <Cell><Data ss:Type="String">Relevant data and visualizations are displayed correctly without delay</Data></Cell>
+        <Cell><Data ss:Type="String">Login with valid credentials
+Navigate to Wards Dashboard</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-002</Data></Cell>
+        <Cell><Data ss:Type="String">Invalid User Access - Dashboard Access Denied</Data></Cell>
+        <Cell><Data ss:Type="String">Negative</Data></Cell>
+        <Cell><Data ss:Type="String">Access denied error message is displayed</Data></Cell>
+        <Cell><Data ss:Type="String">Login with invalid credentials
+Navigate to Wards Dashboard</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-003</Data></Cell>
+        <Cell><Data ss:Type="String">No Data Available - Dashboard Displays Message</Data></Cell>
+        <Cell><Data ss:Type="String">Edge</Data></Cell>
+        <Cell><Data ss:Type="String">No data available message is displayed</Data></Cell>
+        <Cell><Data ss:Type="String">Login with valid credentials
+Navigate to Wards Dashboard with no data</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-004</Data></Cell>
+        <Cell><Data ss:Type="String">Delayed Loading - Dashboard Displays Loading Animation</Data></Cell>
+        <Cell><Data ss:Type="String">Edge</Data></Cell>
+        <Cell><Data ss:Type="String">Loading animation is displayed until data is loaded</Data></Cell>
+        <Cell><Data ss:Type="String">Login with valid credentials
+Navigate to Wards Dashboard with slow network</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-005</Data></Cell>
+        <Cell><Data ss:Type="String">Valid User Access - Dashboard Visualizations</Data></Cell>
+        <Cell><Data ss:Type="String">Positive</Data></Cell>
+        <Cell><Data ss:Type="String">Visualizations are displayed correctly</Data></Cell>
+        <Cell><Data ss:Type="String">Login with valid credentials
+Navigate to Wards Dashboard
+Verify visualizations</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-006</Data></Cell>
+        <Cell><Data ss:Type="String">Nurse Activities - View Patient List</Data></Cell>
+        <Cell><Data ss:Type="String">Positive</Data></Cell>
+        <Cell><Data ss:Type="String">Patient list is displayed correctly</Data></Cell>
+        <Cell><Data ss:Type="String">Login with valid credentials
+Navigate to Wards Dashboard
+View patient list</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-007</Data></Cell>
+        <Cell><Data ss:Type="String">Nurse Activities - View Patient Details</Data></Cell>
+        <Cell><Data ss:Type="String">Positive</Data></Cell>
+        <Cell><Data ss:Type="String">Patient details are displayed correctly</Data></Cell>
+        <Cell><Data ss:Type="String">Login with valid credentials
+Navigate to Wards Dashboard
+View patient details</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-008</Data></Cell>
+        <Cell><Data ss:Type="String">Nurse Activities - Update Patient Status</Data></Cell>
+        <Cell><Data ss:Type="String">Positive</Data></Cell>
+        <Cell><Data ss:Type="String">Patient status is updated correctly</Data></Cell>
+        <Cell><Data ss:Type="String">Login with valid credentials
+Navigate to Wards Dashboard
+Update patient status</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-009</Data></Cell>
+        <Cell><Data ss:Type="String">Nurse Activities - Add New Activity</Data></Cell>
+        <Cell><Data ss:Type="String">Positive</Data></Cell>
+        <Cell><Data ss:Type="String">New activity is added correctly</Data></Cell>
+        <Cell><Data ss:Type="String">Login with valid credentials
+Navigate to Wards Dashboard
+Add new activity</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-010</Data></Cell>
+        <Cell><Data ss:Type="String">Nurse Activities - Delete Activity</Data></Cell>
+        <Cell><Data ss:Type="String">Positive</Data></Cell>
+        <Cell><Data ss:Type="String">Activity is deleted correctly</Data></Cell>
+        <Cell><Data ss:Type="String">Login with valid credentials
+Navigate to Wards Dashboard
+Delete activity</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-011</Data></Cell>
+        <Cell><Data ss:Type="String">Multiple Users - Dashboard Updates in Real-time</Data></Cell>
+        <Cell><Data ss:Type="String">Positive</Data></Cell>
+        <Cell><Data ss:Type="String">Dashboard updates are reflected in real-time for all users</Data></Cell>
+        <Cell><Data ss:Type="String">Login with multiple users
+Navigate to Wards Dashboard
+Verify real-time updates</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-012</Data></Cell>
+        <Cell><Data ss:Type="String">No Internet Connection - Dashboard Error</Data></Cell>
+        <Cell><Data ss:Type="String">Edge</Data></Cell>
+        <Cell><Data ss:Type="String">Error message is displayed for no internet connection</Data></Cell>
+        <Cell><Data ss:Type="String">Login with valid credentials
+Navigate to Wards Dashboard with no internet</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-013</Data></Cell>
+        <Cell><Data ss:Type="String">Browser Compatibility - Dashboard Loads Correctly</Data></Cell>
+        <Cell><Data ss:Type="String">Edge</Data></Cell>
+        <Cell><Data ss:Type="String">Dashboard loads correctly on different browsers</Data></Cell>
+        <Cell><Data ss:Type="String">Login with valid credentials on different browsers
+Navigate to Wards Dashboard</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-014</Data></Cell>
+        <Cell><Data ss:Type="String">Screen Resolution - Dashboard Adapts Correctly</Data></Cell>
+        <Cell><Data ss:Type="String">Edge</Data></Cell>
+        <Cell><Data ss:Type="String">Dashboard adapts correctly to different screen resolutions</Data></Cell>
+        <Cell><Data ss:Type="String">Login with valid credentials on different screen resolutions
+Navigate to Wards Dashboard</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-015</Data></Cell>
+        <Cell><Data ss:Type="String">Data Filtering - Dashboard Displays Filtered Data</Data></Cell>
+        <Cell><Data ss:Type="String">Positive</Data></Cell>
+        <Cell><Data ss:Type="String">Dashboard displays filtered data correctly</Data></Cell>
+        <Cell><Data ss:Type="String">Login with valid credentials
+Navigate to Wards Dashboard
+Apply filters</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-016</Data></Cell>
+        <Cell><Data ss:Type="String">Data Sorting - Dashboard Displays Sorted Data</Data></Cell>
+        <Cell><Data ss:Type="String">Positive</Data></Cell>
+        <Cell><Data ss:Type="String">Dashboard displays sorted data correctly</Data></Cell>
+        <Cell><Data ss:Type="String">Login with valid credentials
+Navigate to Wards Dashboard
+Sort data</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-017</Data></Cell>
+        <Cell><Data ss:Type="String">Error Handling - Dashboard Displays Error Message</Data></Cell>
+        <Cell><Data ss:Type="String">Negative</Data></Cell>
+        <Cell><Data ss:Type="String">Error message is displayed correctly</Data></Cell>
+        <Cell><Data ss:Type="String">Login with valid credentials
+Navigate to Wards Dashboard with error</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-018</Data></Cell>
+        <Cell><Data ss:Type="String">Security - Dashboard Access Control</Data></Cell>
+        <Cell><Data ss:Type="String">Negative</Data></Cell>
+        <Cell><Data ss:Type="String">Access control is enforced correctly</Data></Cell>
+        <Cell><Data ss:Type="String">Login with invalid credentials
+Navigate to Wards Dashboard</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-019</Data></Cell>
+        <Cell><Data ss:Type="String">Performance - Dashboard Loads Within Expected Time</Data></Cell>
+        <Cell><Data ss:Type="String">Positive</Data></Cell>
+        <Cell><Data ss:Type="String">Dashboard loads within expected time</Data></Cell>
+        <Cell><Data ss:Type="String">Login with valid credentials
+Navigate to Wards Dashboard</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">TC-020</Data></Cell>
+        <Cell><Data ss:Type="String">Usability - Dashboard is User-Friendly</Data></Cell>
+        <Cell><Data ss:Type="String">Positive</Data></Cell>
+        <Cell><Data ss:Type="String">Dashboard is user-friendly and easy to navigate</Data></Cell>
+        <Cell><Data ss:Type="String">Login with valid credentials
+Navigate to Wards Dashboard
+Verify usability</Data></Cell>
+        <Cell><Data ss:Type="String">N/A</Data></Cell>
+      </Row>
+    </Table>
+  </Worksheet>
+</Workbook>
