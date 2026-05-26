@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Regression Suite Optimization</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Regression Suite Optimization</h1>
+  <h2>Selected Scripts</h2>
+  <ul>
+    <li>test_login.py</li>
+    <li>test_payment.py</li>
+    <li>test_cart_ui.py</li>
+    <li>test_session_timeout.py</li>
+    <li>test_search_product_ui.py</li>
+  </ul>
+  <h2>Excluded Scripts</h2>
+  <ul>
+    <li>test_profile.py</li>
+    <li>test_logout.py</li>
+  </ul>
+  <h2>Risk Areas</h2>
+  <ul>
+    <li>MFA authentication</li>
+    <li>Payment retry logic</li>
+    <li>Cart page redesign</li>
+    <li>Session timeout handling</li>
+    <li>Search Product loading time</li>
+  </ul>
+  <h2>JSON Output</h2>
+  <pre>
+{
+  "selected_scripts": [
+    "test_login.py",
+    "test_payment.py",
+    "test_cart_ui.py",
+    "test_session_timeout.py",
+    "test_search_product_ui.py"
+  ],
+  "excluded_scripts": [
+    "test_profile.py",
+    "test_logout.py"
+  ],
+  "risk_areas": [
+    "MFA authentication",
+    "Payment retry logic",
+    "Cart page redesign",
+    "Session timeout handling",
+    "Search Product loading time"
+  ]
+}
+  </pre>
+</body>
+</html>
