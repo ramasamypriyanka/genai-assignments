@@ -1,0 +1,301 @@
+{
+  "info": {
+    "_postman_id": "a4c539ce-c2a3-4a1c-9ab4-68eb4d03899d",
+    "name": "Ingestion Pipeline",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "15495678"
+  },
+  "item": [
+    {
+      "name": "Phase 2 - PDF Upload API",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "ce4ffc40-90fd-4287-b391-a825d9aa3f6b",
+              "src": "/C:/Users/hp/Downloads/Order of Application flow/Ingestion Documents/Resumes/Sriram_Performance Testing.pdf"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/v1/resume/upload",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "resume",
+            "upload"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Phase 3 - PDF Text Extraction",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "caaca60a-cdfd-4194-baa3-8b2de35b5ab0",
+              "src": "/C:/Users/hp/Downloads/Order of Application flow/Ingestion Documents/Resumes/Sriram_Performance Testing.pdf"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/v1/resume/extract",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "resume",
+            "extract"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Phase 4 - Text Cleaning",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "fdf4dbbf-94d5-453c-8eac-87c61a3a86fe",
+              "src": "/C:/Users/hp/Downloads/Order of Application flow/Ingestion Documents/Resumes/Sriram_Performance Testing.pdf"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/v1/resume/clean",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "resume",
+            "clean"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Phase 5,6,7 - Algorithm Resume Parser",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "5dc79d95-c2d8-451d-b9c1-5b928e58142b",
+              "src": "/C:/Users/hp/Downloads/Order of Application flow/Ingestion Documents/Resumes/Sriram_Performance Testing.pdf"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/v1/resume/parse",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "resume",
+            "parse"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Phase 8 - LLM Parser",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "2225df18-9554-4490-a4a4-b30047cdf943",
+              "src": "/C:/Users/hp/Downloads/Order of Application flow/Ingestion Documents/Resumes/Sriram_Performance Testing.pdf"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/v1/resume/llm-parse",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "resume",
+            "llm-parse"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Phase 9 - Mistral Embedding Generation",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "6ac98345-d5e6-4a00-9447-e36173e20a00",
+              "src": "/C:/Users/hp/Downloads/Order of Application flow/Ingestion Documents/Resumes/Sriram_Performance Testing.pdf"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/v1/resume/embed",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "resume",
+            "embed"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Phase 10 - MongoDb Ingestion",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "f95869bc-d103-48a0-b36f-500b71e01743",
+              "src": "/C:/Users/hp/Downloads/Order of Application flow/Ingestion Documents/Resumes/Sriram_Performance Testing.pdf"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/v1/resume/store",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "resume",
+            "store"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Phase 11,12,13 - Ingestion",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "47676c4f-dd66-4d39-949c-46299eedc0dd",
+              "src": "/C:/Users/hp/Downloads/Order of Application flow/Ingestion Documents/Resumes/Naukri_SathishKumar[8y_0m].docx"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/v1/resume/inject",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "resume",
+            "inject"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "end to end search",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"query\": \"Java QA Engineer Selenium\",\r\n  \"topK\": 5,\r\n  \"summarize\": false\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/v1/search",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "search"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

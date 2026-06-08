@@ -1,0 +1,318 @@
+{
+  "info": {
+    "_postman_id": "1710bf1a-bb2f-48ff-a69a-99a9c5aa5a59",
+    "name": "Resume Ingestion",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "15495678"
+  },
+  "item": [
+    {
+      "name": "Phase 1 - Test 1-Discover all resumes with default folder",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/v1/batch/discover",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "batch",
+            "discover"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Phase 1 - Test 2 — Override folder via query param",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/v1/batch/discover?folder=C:\\Users\\hp\\Downloads",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "batch",
+            "discover"
+          ],
+          "query": [
+            {
+              "key": "folder",
+              "value": "C:\\Users\\hp\\Downloads"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Phase 1- Test 3 — Invalid folder path",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/v1/batch/discover?folder=C:\\nonexistent\\path",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "batch",
+            "discover"
+          ],
+          "query": [
+            {
+              "key": "folder",
+              "value": "C:\\nonexistent\\path"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Phase 2 - Test 1 — Upload a DOCX resume via POST",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "88912e00-7d89-483d-a57d-004404dbd644",
+              "src": "/C:/Users/hp/Downloads/Order of Application flow/Ingestion Documents/Resumes/Naukri_SAKTHIPriya[0y_0m].docx"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/v1/resume/extract",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "resume",
+            "extract"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Phase 2 - Test 2 — Full inject with a DOCX resume via POST",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "2012e067-8628-4e17-b661-bf52b6c31445",
+              "src": "/C:/Users/hp/Downloads/Order of Application flow/Ingestion Documents/Resumes/Naukri_SAKTHIPriya[0y_0m].docx"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/v1/resume/inject",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "resume",
+            "inject"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Phase 2 - Test 3 — Upload a PDF still works (regression check)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "530e7642-96e2-4863-92d8-25040b5e9261",
+              "src": "/C:/Users/hp/Downloads/Order of Application flow/Ingestion Documents/Resumes/Naukri_GowthamM[4y_0m].pdf"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/v1/resume/extract",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "resume",
+            "extract"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Phase 3 - Test 1 — Start a batch job (small batch size = 5)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "\r\n{\r\n  \"batchSize\": 5\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/v1/batch/ingest",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "batch",
+            "ingest"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Phase 3 - Test 2 — Poll status while running",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/v1/batch/status/b505b2c2-29dc-49fa-8911-793a0c4fcf2d",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "batch",
+            "status",
+            "b505b2c2-29dc-49fa-8911-793a0c4fcf2d"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Phase 3 - Test 3 — List all batch jobs",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/v1/batch/jobs",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "batch",
+            "jobs"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Phase 4 - Test 1 — Start a fresh batch and get report while running",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"batchSize\": 10 }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/v1/batch/ingest",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "batch",
+            "ingest"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Phase 4 - Test 1 - Report Batch Status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/v1/batch/report/1cc341b6-5a86-4c5f-af5b-0f2224f4bbf2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "batch",
+            "report",
+            "1cc341b6-5a86-4c5f-af5b-0f2224f4bbf2"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
