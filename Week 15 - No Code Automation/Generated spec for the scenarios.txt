@@ -1,0 +1,65 @@
+import { test, expect } from '@playwright/test';
+
+test.describe('Customer Login and Checkout on SauceDemo', () => {
+
+  test('Successful login and product purchase', async ({ page }) => {
+    // When I log in with username "standard_user" and password "secret_sauce"
+    await page.getByLabel('Username').fill('standard_user');
+    await page.getByLabel('Password').fill('secret_sauce');
+    await page.getByRole('button', { name: 'Login' }).click();
+    // Then I should be redirected to the products page
+    await expect(page).toHaveURL('the products page');
+    // When I add "Sauce Labs Backpack" to the cart
+    await page.getByRole('button', { name: 'Add to cart' }).click();
+    // And I open the cart
+    await page.getByText('1').click();
+    // And I proceed to checkout
+    await page.getByRole('button', { name: 'Checkout' }).click();
+    // And I fill in checkout information with first name "Priyanka", last name "Sriram", zip code "600010"
+    await page.getByLabel('first name').fill('Priyanka');
+    await page.getByLabel('last name').fill('Sriram');
+    await page.getByLabel('Zip/Postal Code').fill('600010');
+    // And I continue to the overview page
+    await page.getByRole('button', { name: 'Continue' }).click();
+    // And I finish the purchase
+    await page.getByRole('button', { name: 'Finish' }).click();
+    // Then I should see the order confirmation message "Thank you for your order!"
+    await expect(page.getByText('Thank you for your order!')).toBeVisible();
+  });
+
+  test('Login attempt with a locked out user', async ({ page }) => {
+    // When I log in with username "locked_out_user" and password "secret_sauce"
+    await page.getByLabel('Username').fill('locked_out_user');
+    await page.getByLabel('Password').fill('secret_sauce');
+    await page.getByRole('button', { name: 'Login' }).click();
+    // Then I should see an error message "Epic sadface: Sorry, this user has been locked out."
+    await expect(page.getByText('Epic sadface: Sorry, this user has been locked out.')).toBeVisible();
+  });
+
+  test('Login validation for different user types', async ({ page }) => {
+    // When I log in with username "standard_user" and password "secret_sauce"
+    await page.getByLabel('Username').fill('standard_user');
+    await page.getByLabel('Password').fill('secret_sauce');
+    await page.getByRole('button', { name: 'Login' }).click();
+    // Then I should see "Products"
+    await expect(page.getByText('Products')).toBeVisible();
+  });
+
+  test('Login validation for different user types', async ({ page }) => {
+    // When I log in with username "locked_out_user" and password "secret_sauce"
+    await page.getByLabel('Username').fill('locked_out_user');
+    await page.getByLabel('Password').fill('secret_sauce');
+    await page.getByRole('button', { name: 'Login' }).click();
+    // Then I should see "Epic sadface: Sorry, this user has been locked out."
+    await expect(page.getByText('Epic sadface: Sorry, this user has been locked out.')).toBeVisible();
+  });
+
+  test('Login validation for different user types', async ({ page }) => {
+    // When I log in with username "invalid_user" and password "wrong_password"
+    await page.getByLabel('Username').fill('invalid_user');
+    await page.getByLabel('Password').fill('wrong_password');
+    await page.getByRole('button', { name: 'Login' }).click();
+    // Then I should see "Epic sadface: Username and password do not match any user in this service"
+    await expect(page.getByText('Epic sadface: Username and password do not match any user in this service')).toBeVisible();
+  });
+});
